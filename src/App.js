@@ -4,12 +4,9 @@ import './App.css';
 import BeerCard from './BeerCard'
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
+  state = {
       arrayOfBeer: []
     }
-  }
 
   componentDidMount() {
     axios.get('https://api.punkapi.com/v2/beers/')
