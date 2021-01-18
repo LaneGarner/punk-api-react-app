@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import { Favs } from './Favs'
 import BeerCard from './BeerCard'
 
 class App extends Component {
-  state = {
-      arrayOfBeer: []
-    }
+  constructor(props) {
+    super(props)
+    this.state = {
+        arrayOfBeer: [],
+        arrayOfFavBeer: []
+      }
+  }
 
   componentDidMount() {
     axios.get('https://api.punkapi.com/v2/beers/')
@@ -22,6 +27,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <div>
+            <h3>My Favs</h3>
+            <p>Like a beer below to add it to your favs</p>
+            <ul>
+                <Favs />
+            </ul>
+        </div>
           <ol>{this.state.arrayOfBeer.map((beer, i) => {
             return (
               <BeerCard 

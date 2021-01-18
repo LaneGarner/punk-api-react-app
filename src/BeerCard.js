@@ -1,5 +1,6 @@
 import React from 'react'
-import LikeButton from './LikeButton'
+import HeartButton from './HeartButton'
+// import LikeButton from './LikeButton'
 
 const BeerCard = (props) => {
     return(
@@ -13,7 +14,8 @@ const BeerCard = (props) => {
                 <h2>{props.name}</h2>
                 <h4>{props.tagline}</h4>
                 <p style={{fontSize: "18px"}}>{props.description}</p>
-                <LikeButton />
+                {/* <LikeButton /> */}
+                <HeartButton />
             </div>
         </li>
     )
