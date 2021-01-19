@@ -10,9 +10,10 @@ const FavCard = (props) => {
 
     return(
         <div 
+        className="Fav-card"
         onMouseEnter={()=> {isHidden ? setHide(false) : setHide(true)}}
         onMouseLeave={()=> {isHidden ? setHide(false) : setHide(true)}}
-        style={{  listStyle: "none", display: "flex", flexDirection: "column", margin: "10px", borderRadius: "10px", padding: "10px", alignItems: "center", width: "18vw"}}>
+        style={{ listStyle: "none", display: "flex", flexDirection: "column", margin: "10px", borderRadius: "10px", padding: "10px", alignItems: "center", width: "10vw"}}>
             {!isHidden &&
                 // <img style={{ height: "150px", marginBottom: "10px" }} src={props.image_url} alt="beer closeup"></img> :
                 <RemoveFav 
@@ -29,7 +30,8 @@ const FavCard = (props) => {
             
             }
             <AnchorLink href={`#${props.id}`}>
-            <img 
+            <img
+                className="Beer-img"
                 style={{ height: "150px", marginBottom: "10px" }} src={props.image_url}
                 alt="beer closeup"
             ></img> 

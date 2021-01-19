@@ -125,7 +125,7 @@ class App extends Component {
             )
           })}
           </ol>
-          <ScrollUpButton />
+          <ScrollUpButton className="Scroll-up"/>
         </body>
       </div>
     );

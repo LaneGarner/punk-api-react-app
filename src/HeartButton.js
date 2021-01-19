@@ -10,7 +10,6 @@ export default function HeartButton(props) {
         // this.state.fav ? this.setState({ fav: false}) : this.setState({ fav: true})
         // console.log(props.id)
         props.moveId(props.id)
-        // setFav()
     }
 
     // const setFav = () => {

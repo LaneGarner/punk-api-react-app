@@ -23,7 +23,7 @@ export default function RemoveFav(props) {
             background: "transparent",
             border: "none",
             cursor: "pointer",
-            color: "tomato",
+            // color: "tomato",
             outline: "none",
             fontSize: "30px",
             position: "absolute",
@@ -36,6 +36,7 @@ export default function RemoveFav(props) {
 
     return (
         <button
+        className="Close-button"
         style={buttonStyle} 
         onClick={handleClick}> 
         x

@@ -1,0 +1,4 @@
+.Fav-card:hover {
+    transform: translateY(-.1em);
+    background: rgba(238, 238, 238, 0.507);
+}

@@ -1,0 +1,7 @@
+.Close-button {
+    color: rgb(190, 188, 188);
+}
+
+.Close-button:hover {
+    color: tomato;
+}
