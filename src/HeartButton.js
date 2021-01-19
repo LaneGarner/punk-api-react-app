@@ -1,21 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 
-class HeartButton extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            fav: false
-        }
+export default function HeartButton(props) {
+
+    const [fav, setFav] = useState(false)
+
+
+    const handleClick = () => {
+        // fav ? setFav(false) : setFav(true)
+        // this.state.fav ? this.setState({ fav: false}) : this.setState({ fav: true})
+        // console.log(props.id)
+        props.moveId(props.id)
+        // setFav()
     }
 
-    
-    handleClick = () => {
-        this.state.fav ? this.setState({ fav: false}) : this.setState({ fav: true})
-    }
-    
-    render() {
+    // const setFav = () => {
+    //             this.state.fav ? this.setState({ fav: false}) : this.setState({ fav: true})
 
-        let buttonStyle = {
+    // }
+
+    const buttonStyle = {
             background: "transparent",
             border: "none",
             cursor: "pointer",
@@ -24,21 +27,63 @@ class HeartButton extends Component {
             fontSize: "30px"
         }
 
-        
-        let openHeart = () => {
-            return <i class="far fa-heart"></i>
-        }
-        let filledHeart = () => {
-            return <i class="fas fa-heart"></i>
-        }
 
-        return (
-            <button 
+        const openHeart = <i className="far fa-heart"></i>
+        const filledHeart = <i className="fas fa-heart"></i>
+    
+    return (
+        <button 
             style={buttonStyle} 
-            onClick={this.handleClick}>{this.state.fav ? filledHeart() : openHeart() }
-            </button>
-        )
-    }
+            onClick={handleClick}> 
+            {/* {fav ? filledHeart() : openHeart() } */}
+            {openHeart}
+        </button>
+    )
 }
 
-export default HeartButton
+
+
+
+
+// class HeartButton extends Component {
+//     constructor(props) {
+//         super(props)
+//         this.state = {
+//             fav: false
+//         }
+//     }
+    
+//     handleClick = () => {
+//         // this.state.fav ? this.setState({ fav: false}) : this.setState({ fav: true})
+//         console.log(props.id)
+//     }
+    
+//     render() {
+
+//         let buttonStyle = {
+//             background: "transparent",
+//             border: "none",
+//             cursor: "pointer",
+//             color: "tomato",
+//             outline: "none",
+//             fontSize: "30px"
+//         }
+
+        
+//         let openHeart = () => {
+//             return <i class="far fa-heart"></i>
+//         }
+//         let filledHeart = () => {
+//             return <i class="fas fa-heart"></i>
+//         }
+
+//         return (
+//             <button 
+//             style={buttonStyle} 
+//             onClick={this.handleClick}>{this.state.fav ? filledHeart() : openHeart() }
+//             </button>
+//         )
+//     }
+// }
+
+// export default HeartButton

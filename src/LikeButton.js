@@ -6,8 +6,8 @@ const LikeButton = () => {
     return (
         <div className="App">
             <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
-        </div>    )
-
+        </div>    
+        )
 }
 
 export default LikeButton;
