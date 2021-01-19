@@ -5,6 +5,7 @@ import './App.css';
 // import { Favs } from './Favs'
 import BeerCard from './BeerCard'
 import FavCard from './FavCard'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 class App extends Component {
   constructor(props) {
@@ -80,7 +81,7 @@ class App extends Component {
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
             
             {this.state.arrayOfFavBeer.length === 0 ?
-            <a href="#top" className="App-tag">⬇️ Like a beer below to add it to your faves ⬇️</a> :
+            <AnchorLink href="#top" className="App-tag">⬇️ Like a beer below to add it to your faves ⬇️</AnchorLink> :
             <h3 className="App-tag">My Faves</h3> }
             <ul style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
 
