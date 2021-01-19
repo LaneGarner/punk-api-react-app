@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RemoveFav from './RemoveFav';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './FavCard.css';
 
 
@@ -27,11 +28,12 @@ const FavCard = (props) => {
             </div>
             
             }
-
+            <AnchorLink href={`#${props.id}`}>
             <img 
                 style={{ height: "150px", marginBottom: "10px" }} src={props.image_url}
                 alt="beer closeup"
             ></img> 
+            </AnchorLink>
 
             {/* } */}
 

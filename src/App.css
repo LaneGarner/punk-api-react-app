@@ -1,6 +1,6 @@
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 .App {
   text-align: center;
@@ -51,6 +51,7 @@ html {
   text-align: center;
   font-size: 3em;
   margin-top: 200px;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

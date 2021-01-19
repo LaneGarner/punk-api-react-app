@@ -6,6 +6,7 @@ import './App.css';
 import BeerCard from './BeerCard'
 import FavCard from './FavCard'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import ScrollUpButton from "react-scroll-up-button";
 
 class App extends Component {
   constructor(props) {
@@ -81,7 +82,7 @@ class App extends Component {
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
             
             {this.state.arrayOfFavBeer.length === 0 ?
-            <AnchorLink href="#top" className="App-tag">⬇️ Like a beer below to add it to your faves ⬇️</AnchorLink> :
+            <AnchorLink href="#main" className="App-tag">⬇️ Like a beer below to add it to your faves ⬇️</AnchorLink> :
             <h3 className="App-tag">My Faves</h3> }
             <ul style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
 
@@ -103,7 +104,7 @@ class App extends Component {
             </ul>
         </div>
                 </header>
-            <body className="App-body" id="top">
+            <body className="App-body" id="main">
           <ol style={{zIndex: 999}}>{this.state.arrayOfBeer.map((beer) => {
             return (
               <BeerCard 
@@ -124,6 +125,7 @@ class App extends Component {
             )
           })}
           </ol>
+          <ScrollUpButton />
         </body>
       </div>
     );

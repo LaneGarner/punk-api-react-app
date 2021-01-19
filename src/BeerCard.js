@@ -3,14 +3,14 @@ import HeartButton from './HeartButton'
 import UnHeartButton from './UnHeartButton'
 
 const BeerCard = (props) => {
-    const {name, image_url, malts, hops, yeast} = props
+    const {id, name, image_url, malts, hops, yeast} = props
     const [isHidden, setHide] = useState(true)
     // const [isClicked, setClick] =useState(false)
 
     // const showHeart = props.fillHeart(props.id)
 
     return(
-        <div style={{ zIndex: 999, listStyle: "none", display: "flex", background: "#333", margin: "20px", borderRadius: "10px", padding: "20px", alignItems: "center", width: "60vw"}}>
+        <div id={id} style={{ zIndex: 999, listStyle: "none", display: "flex", background: "#333", margin: "20px", borderRadius: "10px", padding: "20px", alignItems: "center", width: "60vw"}}>
             <img 
                 style={{ height: "300px", margin: "20px" }} src={props.image_url}
                 alt="image of beer"
