@@ -6,17 +6,8 @@ export default function UnHeartButton(props) {
 
 
     const handleClick = () => {
-        // fav ? setFav(false) : setFav(true)
-        // this.state.fav ? this.setState({ fav: false}) : this.setState({ fav: true})
-        // console.log(props.id)
         props.removeId(props.id)
-        // setFav()
     }
-
-    // const setFav = () => {
-    //             this.state.fav ? this.setState({ fav: false}) : this.setState({ fav: true})
-
-    // }
 
     const buttonStyle = {
             background: "transparent",
@@ -35,8 +26,6 @@ export default function UnHeartButton(props) {
         style={buttonStyle} 
         onClick={handleClick}> 
         {filledHeart}
-        {/* {fav ? filledHeart : openHeart } */}
-        {/* button */}
         </button>
     )
 }

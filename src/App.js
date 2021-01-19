@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
-// import { Favs } from './Favs'
 import BeerCard from './BeerCard'
 import FavCard from './FavCard'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
@@ -26,50 +25,16 @@ class App extends Component {
   }
 
   moveId = (movedId) => {
-    // console.log(movedId)
-    // this.setState({ arrayOfFavBeer: [...new Set(this.state.arrayOfFavBeer, movedId)] })
     this.setState({ arrayOfFavBeer: [...this.state.arrayOfFavBeer, movedId] })
   }
 
   removeId = (removedId) => {
     const copyOfFavs = this.state.arrayOfFavBeer
     copyOfFavs.map((beer, i) => {
-      // console.log(removedId)
       beer === removedId && copyOfFavs.splice(i, 1)
       this.setState({ arrayOfFavBeer: [...copyOfFavs]})
-      // console.log(this.state.arrayOfFavBeer)
     })
-    
-  }
-
-  fillHeart = (beerId) => {
-    // console.log(id)
-    // console.log("fill")
-    // const copyOfFavs = this.state.arrayOfFavBeer
-
-
-    // {this.state.arrayOfBeer.map(beer => 
-
-    // console.log(this.state.arrayOfFavBeer)
-
-      // this.state.arrayOfFavBeer.includes(beer.id) ?
-      // console.log(beer.id) :
-      // console.log("poop")
-      
-      //   {this.state.arrayOfFavBeer.includes(beer.id) && 
-      //   console.log("true")
-      
-      // }
-
-      // )}
-
-
-  }
-
-  componentDidUpdate() {
-    // console.log(this.state.arrayOfFavBeer)
-    // favs = this.state.arrayOfFavBeer
-    // console.log(favs)
+  
   }
 
   render() {
