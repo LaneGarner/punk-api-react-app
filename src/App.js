@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import logo from './logo.svg';
 import './App.css';
 // import { Favs } from './Favs'
 import BeerCard from './BeerCard'
@@ -73,19 +74,19 @@ class App extends Component {
 
     return (
       <div className="App">
-        <body className="App-body">
-          <h1>🍻 FaveBrews 🍻</h1>
+          <header className="App-body Bar-bckgrnd">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-name">🍺🍻🍺 faveBrüs 🍻🍺🍻</h1>
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
             
             {this.state.arrayOfFavBeer.length === 0 ?
-            <p>'Heart' a beer below to add it to your faves</p> :
-            <h3>My Faves</h3> }
-            
-            <ul style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
+            <a href="#top" className="App-tag">⬇️ Like a beer below to add it to your faves ⬇️</a> :
+            <h3 className="App-tag">My Faves</h3> }
+            <ul style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
 
             
               {this.state.arrayOfBeer.map(beer => 
-              <li style={{listStyle: "none"}}>
+              <li style={{zIndex: 999, listStyle: "none"}}>
                 {this.state.arrayOfFavBeer.includes(beer.id) && 
                 <FavCard  
                 key={beer.id} 
@@ -100,7 +101,9 @@ class App extends Component {
               )}
             </ul>
         </div>
-          <ol>{this.state.arrayOfBeer.map((beer) => {
+                </header>
+            <body className="App-body" id="top">
+          <ol style={{zIndex: 999}}>{this.state.arrayOfBeer.map((beer) => {
             return (
               <BeerCard 
                 key={beer.id}

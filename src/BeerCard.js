@@ -10,7 +10,7 @@ const BeerCard = (props) => {
     // const showHeart = props.fillHeart(props.id)
 
     return(
-        <div style={{ listStyle: "none", display: "flex", background: "#333", margin: "20px", borderRadius: "10px", padding: "20px", alignItems: "center", width: "60vw"}}>
+        <div style={{ zIndex: 999, listStyle: "none", display: "flex", background: "#333", margin: "20px", borderRadius: "10px", padding: "20px", alignItems: "center", width: "60vw"}}>
             <img 
                 style={{ height: "300px", margin: "20px" }} src={props.image_url}
                 alt="image of beer"

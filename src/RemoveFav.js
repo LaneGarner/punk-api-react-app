@@ -1,4 +1,5 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState } from 'react';
+import ('./RemoveFav.css');
 
 export default function RemoveFav(props) {
 
@@ -26,15 +27,18 @@ export default function RemoveFav(props) {
             outline: "none",
             fontSize: "30px",
             position: "absolute",
-            float: "left"
+            // left: "-2px",
+            transform: "translate(-40px, -20px)",
+            // transform: "translateY(-30px)",
+            fontWeight: 100,
         }
         
 
     return (
-        <button 
+        <button
         style={buttonStyle} 
         onClick={handleClick}> 
-        X
+        x
         {/* {fav ? filledHeart : openHeart } */}
         {/* button */}
         </button>

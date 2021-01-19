@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import RemoveFav from './RemoveFav'
+import React, { useState } from 'react';
+import RemoveFav from './RemoveFav';
+import './FavCard.css';
+
 
 const FavCard = (props) => {
     // const {name, image_url, malts, hops, yeast} = props
@@ -16,7 +18,7 @@ const FavCard = (props) => {
                 alt="beer closeup"
             ></img>
             <div>
-                {/* <h2>{props.name}</h2> */}
+                <h3 className="Fav-name">{props.name}</h3>
                 <p style={{fontSize: "18px"}}>{props.description}</p>
             </div>
         </div>
